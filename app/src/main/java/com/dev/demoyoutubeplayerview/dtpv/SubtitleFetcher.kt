@@ -3,7 +3,6 @@ package com.dev.demoyoutubeplayerview.dtpv
 import android.net.Uri
 import android.widget.Toast
 import com.dev.demoyoutubeplayerview.BuildConfig
-import com.dev.demoyoutubeplayerview.PlayerActivity
 import com.dev.demoyoutubeplayerview.PlayerActivity.Companion.mPrefs
 import com.google.android.exoplayer2.MediaItem
 import com.google.android.exoplayer2.MediaItem.SubtitleConfiguration

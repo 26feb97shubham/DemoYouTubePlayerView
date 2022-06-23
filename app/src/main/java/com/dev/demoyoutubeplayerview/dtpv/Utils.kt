@@ -30,7 +30,6 @@ import androidx.appcompat.app.AlertDialog
 import androidx.documentfile.provider.DocumentFile
 import com.arthenica.ffmpegkit.*
 import com.dev.demoyoutubeplayerview.BuildConfig.FLAVOR_distribution
-import com.dev.demoyoutubeplayerview.PlayerActivity
 import com.dev.demoyoutubeplayerview.PlayerActivity.Companion.chapterStarts
 import com.dev.demoyoutubeplayerview.PlayerActivity.Companion.chaptersThread
 import com.dev.demoyoutubeplayerview.PlayerActivity.Companion.frameRateSwitchThread
@@ -40,7 +39,6 @@ import com.google.android.exoplayer2.Format
 import com.google.android.exoplayer2.ui.StyledPlayerControlView
 import com.google.android.exoplayer2.util.MimeTypes
 import com.obsez.android.lib.filechooser.ChooserDialog
-import com.obsez.android.lib.filechooser.ChooserDialog.OnBackPressedListener
 import java.io.File
 import java.lang.Exception
 import java.lang.RuntimeException

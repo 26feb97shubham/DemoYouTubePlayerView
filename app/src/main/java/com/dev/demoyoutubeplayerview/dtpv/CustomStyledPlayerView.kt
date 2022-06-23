@@ -10,7 +10,6 @@ import android.view.*
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.core.view.GestureDetectorCompat
-import com.dev.demoyoutubeplayerview.PlayerActivity
 import com.dev.demoyoutubeplayerview.R
 import com.google.android.exoplayer2.C
 import com.google.android.exoplayer2.SeekParameters

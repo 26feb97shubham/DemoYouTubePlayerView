@@ -11,7 +11,6 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
 import androidx.core.content.ContextCompat
 import androidx.core.widget.TextViewCompat
-import com.dev.demoyoutubeplayerview.PlayerActivity
 import com.dev.demoyoutubeplayerview.R
 import com.dev.demoyoutubeplayerview.dtpv.DoubleTapPlayerView
 import com.dev.demoyoutubeplayerview.dtpv.PlayerDoubleTapListener

@@ -5,7 +5,6 @@ import android.content.Context
 import android.content.pm.ActivityInfo
 import android.hardware.display.DisplayManager
 import android.media.audiofx.LoudnessEnhancer
-import com.dev.demoyoutubeplayerview.PlayerActivity
 import com.dev.demoyoutubeplayerview.PlayerActivity.Companion.apiAccess
 import com.dev.demoyoutubeplayerview.PlayerActivity.Companion.displayListener
 import com.dev.demoyoutubeplayerview.PlayerActivity.Companion.displayManager

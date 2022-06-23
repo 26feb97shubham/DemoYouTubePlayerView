@@ -1,9 +1,7 @@
 package com.dev.demoyoutubeplayerview.dtpv
 
 import android.net.Uri
-import com.dev.demoyoutubeplayerview.PlayerActivity
 import com.google.android.exoplayer2.util.Util
-import okhttp3.HttpUrl
 import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
 import java.util.ArrayList
 

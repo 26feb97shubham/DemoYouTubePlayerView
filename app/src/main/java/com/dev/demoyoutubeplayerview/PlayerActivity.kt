@@ -32,6 +32,7 @@ import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate.*
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.documentfile.provider.DocumentFile
@@ -67,80 +68,80 @@ import java.util.HashMap
 import kotlin.math.roundToInt
 
 
-class PlayerActivity : Activity() {
+class PlayerActivity : AppCompatActivity() {
     companion object{
-         val playerListener: PlayerListener? = null
-         val mReceiver: BroadcastReceiver? = null
-         val mAudioManager: AudioManager? = null
-         var mediaSession: MediaSessionCompat? = null
+        val playerListener: PlayerListener? = null
+        val mReceiver: BroadcastReceiver? = null
+        val mAudioManager: AudioManager? = null
+        var mediaSession: MediaSessionCompat? = null
 
-         var trackSelector: DefaultTrackSelector? = null
+        var trackSelector: DefaultTrackSelector? = null
         var loudnessEnhancer: LoudnessEnhancer? = null
 
         var playerView: CustomStyledPlayerView? = null
         var player: ExoPlayer? = null
-         val youTubeOverlay: YouTubeOverlay? = null
+        val youTubeOverlay: YouTubeOverlay? = null
 
-         val mPictureInPictureParamsBuilder: PictureInPictureParams.Builder? = null
+        val mPictureInPictureParamsBuilder: PictureInPictureParams.Builder? = null
 
         var mPrefs: Prefs? = null
         var mBrightnessControl: BrightnessControl? = null
         var haveMedia = false
-         var videoLoading = false
+        var videoLoading = false
         var controllerVisible = false
         var controllerVisibleFully = false
         var snackbar: Snackbar? = null
-         var errorToShow: ExoPlaybackException? = null
+        var errorToShow: ExoPlaybackException? = null
         var boostLevel = 0
-         var isScaling = false
-         var isScaleStarting = false
-         var scaleFactor = 1.0f
+        var isScaling = false
+        var isScaleStarting = false
+        var scaleFactor = 1.0f
 
-         val REQUEST_CHOOSER_VIDEO = 1
-         val REQUEST_CHOOSER_SUBTITLE = 2
-         val REQUEST_CHOOSER_SCOPE_DIR = 10
-         val REQUEST_CHOOSER_VIDEO_MEDIASTORE = 20
-         val REQUEST_CHOOSER_SUBTITLE_MEDIASTORE = 21
-         val REQUEST_SETTINGS = 100
-         val REQUEST_SYSTEM_CAPTIONS = 200
+        val REQUEST_CHOOSER_VIDEO = 1
+        val REQUEST_CHOOSER_SUBTITLE = 2
+        val REQUEST_CHOOSER_SCOPE_DIR = 10
+        val REQUEST_CHOOSER_VIDEO_MEDIASTORE = 20
+        val REQUEST_CHOOSER_SUBTITLE_MEDIASTORE = 21
+        val REQUEST_SETTINGS = 100
+        val REQUEST_SYSTEM_CAPTIONS = 200
         val CONTROLLER_TIMEOUT = 3500
-         val ACTION_MEDIA_CONTROL = "media_control"
-         val EXTRA_CONTROL_TYPE = "control_type"
-         val REQUEST_PLAY = 1
-         val REQUEST_PAUSE = 2
-         val CONTROL_TYPE_PLAY = 1
-         val CONTROL_TYPE_PAUSE = 2
+        val ACTION_MEDIA_CONTROL = "media_control"
+        val EXTRA_CONTROL_TYPE = "control_type"
+        val REQUEST_PLAY = 1
+        val REQUEST_PAUSE = 2
+        val CONTROL_TYPE_PLAY = 1
+        val CONTROL_TYPE_PAUSE = 2
 
-         val coordinatorLayout: CoordinatorLayout? = null
-         val titleView: TextView? = null
-         val buttonOpen: ImageButton? = null
-         val buttonPiP: ImageButton? = null
-         val buttonAspectRatio: ImageButton? = null
-         val buttonRotation: ImageButton? = null
-         val exoSettings: ImageButton? = null
-         val exoPlayPause: ImageButton? = null
-         val loadingProgressBar: ProgressBar? = null
-         val controlView: StyledPlayerControlView? = null
-         val timeBar: CustomDefaultTimeBar? = null
+        val coordinatorLayout: CoordinatorLayout? = null
+        val titleView: TextView? = null
+        val buttonOpen: ImageButton? = null
+        val buttonPiP: ImageButton? = null
+        val buttonAspectRatio: ImageButton? = null
+        val buttonRotation: ImageButton? = null
+        val exoSettings: ImageButton? = null
+        val exoPlayPause: ImageButton? = null
+        val loadingProgressBar: ProgressBar? = null
+        val controlView: StyledPlayerControlView? = null
+        val timeBar: CustomDefaultTimeBar? = null
 
-         var restoreOrientationLock = false
-         var restorePlayState = false
-         val restorePlayStateAllowed = false
-         var play = false
-         var subtitlesScale = 0f
-         val isScrubbing = false
-         var scrubbingNoticeable = false
-         val scrubbingStart: Long = 0
+        var restoreOrientationLock = false
+        var restorePlayState = false
+        val restorePlayStateAllowed = false
+        var play = false
+        var subtitlesScale = 0f
+        val isScrubbing = false
+        var scrubbingNoticeable = false
+        val scrubbingStart: Long = 0
         var frameRendered = false
-         val alive = false
+        val alive = false
         var focusPlay = false
-         var nextUri: Uri? = null
-         var isTvBox = false
+        var nextUri: Uri? = null
+        var isTvBox = false
         var locked = false
-         var nextUriThread: Thread? = null
+        var nextUriThread: Thread? = null
         var frameRateSwitchThread: Thread? = null
         var chaptersThread: Thread? = null
-         val lastScrubbingPosition: Long = 0
+        val lastScrubbingPosition: Long = 0
         lateinit var chapterStarts: LongArray
 
         var restoreControllerTimeout = false
@@ -378,7 +379,7 @@ class PlayerActivity : Activity() {
         }
 
     }
-    
+
     override fun onCreate(savedInstanceState: Bundle?) {
         //Initializing the pref class
         mPrefs = Prefs(this)

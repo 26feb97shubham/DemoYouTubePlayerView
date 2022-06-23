@@ -4,12 +4,10 @@ import android.content.ContentResolver
 import android.content.Context
 import android.net.Uri
 import androidx.documentfile.provider.DocumentFile
-import com.dev.demoyoutubeplayerview.PlayerActivity
 import com.google.android.exoplayer2.C
 import com.google.android.exoplayer2.MediaItem.SubtitleConfiguration
 import com.google.android.exoplayer2.util.MimeTypes
 import com.ibm.icu.text.CharsetDetector
-import com.ibm.icu.text.CharsetMatch
 import java.io.*
 import java.lang.Exception
 import java.lang.NullPointerException
