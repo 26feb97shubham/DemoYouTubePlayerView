@@ -68,7 +68,7 @@ import java.util.HashMap
 import kotlin.math.roundToInt
 
 
-class PlayerActivity : AppCompatActivity() {
+class PlayerActivity : Activity() {
     companion object{
         val playerListener: PlayerListener? = null
         val mReceiver: BroadcastReceiver? = null
